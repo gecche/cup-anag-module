@@ -29,5 +29,5 @@ a - php artisan migrate:rollback
 
 ```    
 php artisan uninstall-cupparis-package CupAnag
-php artisan module:migrate-rollback 
+php artisan module:migrate-rollback CupAnag
 ```    

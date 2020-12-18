@@ -1,4 +1,5 @@
 <?php
+namespace Modules\CupAnag\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\CupAnagProfessione;
@@ -16,7 +17,7 @@ class CupAnagAnagraficheTableSeeder extends Seeder
 
         $countTipiIndirizzi = \App\Models\CupAnagTipologiaIndirizzo::count();
         $countTipiAnagrafiche = \App\Models\CupAnagTipologiaAnagrafica::count();
-        factory(App\Models\CupAnagAnagrafica::class, 500)->create()->each(function ($anagrafica)
+        factory(\App\Models\CupAnagAnagrafica::class, 500)->create()->each(function ($anagrafica)
         use ($countTipiIndirizzi, $countTipiAnagrafiche) {
 
             /*

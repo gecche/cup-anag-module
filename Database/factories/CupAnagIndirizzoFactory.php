@@ -14,7 +14,7 @@ use Faker\Factory as FakerFactory;
 |
 */
 
-$factory->define(App\Models\CupAnagIndirizzo::class, function (Faker $faker) {
+$factory->define(\App\Models\CupAnagIndirizzo::class, function (Faker $faker) {
     $fakerIt = FakerFactory::create('it_IT');
 
     $countComuni = \App\Models\CupGeoComune::count();

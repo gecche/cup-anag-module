@@ -14,7 +14,7 @@ use Faker\Factory as FakerFactory;
 |
 */
 
-$factory->define(App\Models\CupAnagAnagrafica::class, function (Faker $faker) {
+$factory->define(\App\Models\CupAnagAnagrafica::class, function (Faker $faker) {
     $fakerIt = FakerFactory::create('it_IT');
     $fisicaGiuridica = rand(0, 100) > 50 ? 'G' : 'F';
 

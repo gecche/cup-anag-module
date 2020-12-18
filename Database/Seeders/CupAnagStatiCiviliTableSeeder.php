@@ -1,4 +1,5 @@
 <?php
+namespace Modules\CupAnag\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\CupAnagProfessione;
