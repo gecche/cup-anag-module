@@ -1,0 +1,85 @@
+{
+    "foorm": {
+        "entities": [
+            "cup_anag_anagrafica",
+            "cup_anag_natura_giuridica",
+            "cup_anag_professione",
+            "cup_anag_stato_civile",
+            "cup_anag_contatto",
+            "cup_anag_tipologia_indirizzo",
+            "cup_anag_indirizzo",
+            "cup_anag_tipologia_anagrafica"
+        ]
+    },
+    "modelconfs": {
+        "files": [
+            "CupAnagAnagrafica.js",
+            "CupAnagNaturaGiuridica.js",
+            "CupAnagProfessione.js",
+            "CupAnagStatoCivile.js",
+            "CupAnagContatto.js",
+            "CupAnagTipologiaIndirizzo.js",
+            "CupAnagIndirizzo.js",
+            "CupAnagTipologiaAnagrafica.js"
+        ]
+    },
+    "permissions": {
+        "models": [
+            "cup_anag_anagrafica",
+            "cup_anag_natura_giuridica",
+            "cup_anag_professioni",
+            "cup_anag_stati_civili",
+            "cup_anag_contatto",
+            "cup_anag_tipologia_indirizzo",
+            "cup_anag_indirizzo",
+            "cup_anag_tipologia_anagrafica"
+        ],
+        "other_permissions": {
+            "web": [
+            ]
+        }
+    },
+    "policies": {
+        "models": {
+            "\\App\\Models\\CupAnagAnagrafica": "\\App\\Policies\\CupAnagAnagraficaPolicy",
+            "\\App\\Models\\CupAnagNaturaGiuridica": "\\App\\Policies\\CupAnagNaturaGiuridicaPolicy",
+            "\\App\\Models\\CupAnagProfessione": "\\App\\Policies\\CupAnagProfessionePolicy",
+            "\\App\\Models\\CupAnagStatoCivile": "\\App\\Policies\\CupAnagStatoCivilePolicy",
+            "\\App\\Models\\CupAnagTipologiaIndirizzo": "\\App\\Policies\\CupAnagTipologiaIndirizzoPolicy",
+            "\\App\\Models\\CupAnagTipologiaAnagrafica": "\\App\\Policies\\CupAnagTipologiaAnagraficaPolicy"
+        }
+    },
+    "models": [
+        "CupAnagAnagrafica",
+        "CupAnagNaturaGiuridica",
+        "CupAnagProfessione",
+        "CupAnagStatoCivile",
+        "CupAnagContatto",
+        "CupAnagTipologiaIndirizzo",
+        "CupAnagIndirizzo",
+        "CupAnagTipologiaAnagrafica"
+    ],
+    "datafile-models": [
+    ],
+    "datafile-providers": [
+    ],
+    "public": [
+        "admin/ModelConfs/CupAnagAnagrafica.js",
+        "admin/ModelConfs/CupAnagNaturaGiuridica.js",
+        "admin/ModelConfs/CupAnagProfessione.js",
+        "admin/ModelConfs/CupAnagStatoCivile.js",
+        "admin/ModelConfs/CupAnagContatto.js",
+        "admin/ModelConfs/CupAnagTipologiaIndirizzo.js",
+        "admin/ModelConfs/CupAnagIndirizzo.js",
+        "admin/ModelConfs/CupAnagTipologiaAnagrafica.js",
+        "admin/pages/tabanagmisc.html",
+        "admin/components/js/v-edit-anagrafica.js",
+        "admin/components/templates/v-edit-anagrafica.html"
+    ],
+    "components": [
+        "v-edit-anagrafica"
+    ],
+    "config": [
+        "cupanag"
+    ]
+}

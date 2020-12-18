@@ -1,0 +1,13 @@
+{
+    "name": "CupAnag",
+    "alias": "cupanag",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\CupAnag\\Providers\\CupAnagServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
