@@ -8,7 +8,11 @@
             "cup_anag_contatto",
             "cup_anag_tipologia_indirizzo",
             "cup_anag_indirizzo",
-            "cup_anag_tipologia_anagrafica"
+            "cup_anag_tipologia_anagrafica",
+            "cup_anag_tipologia_affiliazione",
+            "cup_anag_sede",
+            "cup_anag_affiliazione",
+            "cup_anag_storico_affiliazione"
         ]
     },
     "modelconfs": {
@@ -20,7 +24,11 @@
             "CupAnagContatto.js",
             "CupAnagTipologiaIndirizzo.js",
             "CupAnagIndirizzo.js",
-            "CupAnagTipologiaAnagrafica.js"
+            "CupAnagTipologiaAnagrafica.js",
+            "CupAnagTipologiaAffiliazione.js",
+            "CupAnagSede.js",
+            "CupAnagAffiliazione.js",
+            "CupAnagStoricoAffiliazione.js"
         ]
     },
     "permissions": {
@@ -32,7 +40,11 @@
             "cup_anag_contatto",
             "cup_anag_tipologia_indirizzo",
             "cup_anag_indirizzo",
-            "cup_anag_tipologia_anagrafica"
+            "cup_anag_tipologia_anagrafica",
+            "cup_anag_tipologia_affiliazione",
+            "cup_anag_sede",
+            "cup_anag_affiliazione",
+            "cup_anag_storico_affiliazione"
         ],
         "other_permissions": {
             "web": [
@@ -46,7 +58,11 @@
             "\\App\\Models\\CupAnagProfessione": "\\App\\Policies\\CupAnagProfessionePolicy",
             "\\App\\Models\\CupAnagStatoCivile": "\\App\\Policies\\CupAnagStatoCivilePolicy",
             "\\App\\Models\\CupAnagTipologiaIndirizzo": "\\App\\Policies\\CupAnagTipologiaIndirizzoPolicy",
-            "\\App\\Models\\CupAnagTipologiaAnagrafica": "\\App\\Policies\\CupAnagTipologiaAnagraficaPolicy"
+            "\\App\\Models\\CupAnagTipologiaAnagrafica": "\\App\\Policies\\CupAnagTipologiaAnagraficaPolicy",
+            "\\App\\Models\\CupAnagTipologiaAffiliazione" :  "\\App\\Policies\\CupAnagTipologiaAffiliazionePolicy",
+            "\\App\\Models\\CupAnagSede" :  "\\App\\Policies\\CupAnagSedePolicy",
+            "\\App\\Models\\CupAnagAffiliazione" :  "\\App\\Policies\\CupAnagAffiliazionePolicy",
+            "\\App\\Models\\CupAnagStoricoAffiliazione" : "\\App\\Policies\\CupAnagStoricoAffiliazionPolicy"
         }
     },
     "models": [
@@ -57,7 +73,11 @@
         "CupAnagContatto",
         "CupAnagTipologiaIndirizzo",
         "CupAnagIndirizzo",
-        "CupAnagTipologiaAnagrafica"
+        "CupAnagTipologiaAnagrafica",
+        "CupAnagTipologiaAffiliazione",
+        "CupAnagSede",
+        "CupAnagAffiliazione",
+        "CupAnagStoricoAffiliazione"
     ],
     "datafile-models": [
     ],
@@ -72,7 +92,12 @@
         "admin/ModelConfs/CupAnagTipologiaIndirizzo.js",
         "admin/ModelConfs/CupAnagIndirizzo.js",
         "admin/ModelConfs/CupAnagTipologiaAnagrafica.js",
+        "admin/ModelConfs/CupAnagTipologiaAffiliazione.js",
+        "admin/ModelConfs/CupAnagSede.js",
+        "admin/ModelConfs/CupAnagAffiliazione.js",
+        "admin/ModelConfs/CupAnagStoricoAffiliazione.js",
         "admin/pages/tabanagmisc.html",
+        "admin/pages/tabanagtipologie.html",
         "admin/components/js/v-edit-anagrafica.js",
         "admin/components/templates/v-edit-anagrafica.html"
     ],
