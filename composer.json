@@ -8,6 +8,9 @@
             "email": "giacomo.terreni@gmail.com"
         }
     ],
+    "require": {
+        "gecche/cup-geo-module": "main-dev"
+    },
     "extra": {
         "laravel": {
             "providers": [
@@ -23,4 +26,4 @@
             "Modules\\CupAnag\\": ""
         }
     }
-}
+},
