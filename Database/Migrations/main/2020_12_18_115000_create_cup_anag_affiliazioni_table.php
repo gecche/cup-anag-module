@@ -35,6 +35,9 @@ class CreateCupAnagAffiliazioniTable extends Migration
             //ALTRE INFO UTILI A UNA CERTA APP (JSON)
             $table->longText('app_info')->nullable()->default(null);
             $table->unique(['organizzazione_id','affiliata_id'],'cup_anag_aff_1');
+
+            $table->nullableTimestamps();
+            $table->nullableOwnerships();
         });
     }
 
