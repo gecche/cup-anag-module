@@ -99,12 +99,14 @@ class CupAnagAnagrafica extends Breeze {
                 'nome_it' => $this->$relationName->nome_it,
                 'sigla_provincia' => $this->$relationName->sigla_provincia,
                 'nazione_iso3' => $this->$relationName->nazione_iso3,
+                'precap' => $this->$relationName->precap,
             ];
         }
         return [
             'nome_it' => null,
             'sigla_provincia' => null,
             'nazione_iso3' => null,
+            'precap' => null,
         ];
     }
 
