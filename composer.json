@@ -1,7 +1,7 @@
 {
     "name": "gecche/cup-anag-module",
     "type": "laravel-module",
-    "description": "",
+    "description": "Cupparis anagrafiche",
     "authors": [
         {
             "name": "Giacomo Terreni",
