@@ -78,13 +78,13 @@ class CupAnagAnagrafica extends Breeze {
 //        'cognome' => 'between:1,255',
     );
 
-    public $columnsForSelectList = ['id','denominazione'];
+    public $columnsForSelectList = ['denominazione','id'];
     //['id','nome_it'];
 
     public $defaultOrderColumns = ['denominazione' => 'ASC', ];
     //['cognome' => 'ASC','nome' => 'ASC'];
 
-    public $columnsSearchAutoComplete = ['id','denominazione'];
+    public $columnsSearchAutoComplete = ['denominazione','id'];
 
     public $nItemsAutoComplete = 20;
     public $nItemsForSelectList = 100;
