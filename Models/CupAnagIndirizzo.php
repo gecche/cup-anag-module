@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class CupAnagIndirizzo extends Breeze {
 
     use HasFactory;
-    
+
     protected $table = "cup_anag_indirizzi";
 
     public $ownerships = true;
