@@ -1,52 +1,56 @@
 <?php
 
-use Faker\Generator as Faker;
-use Faker\Factory as FakerFactory;
+namespace Database\Factories;
 
-/*
-|--------------------------------------------------------------------------
-| Model Factories
-|--------------------------------------------------------------------------
-|
-| This directory should contain each of the model factory definitions for
-| your application. Factories provide a convenient way to generate new
-| model instances for testing / seeding your application's database.
-|
-*/
-
-$factory->define(\App\Models\CupAnagContatto::class, function (Faker $faker) {
-    $fakerIt = FakerFactory::create('it_IT');
-
-    $contattoModel = new App\Models\CupAnagContatto();
-    $tipoArray = \Gecche\DBHelper\Facades\DBHelper::helper($contattoModel->getConnectionName())->listEnumValues('tipo','cup_anag_contatti');
-
-    $tipo = \Illuminate\Support\Arr::random($tipoArray);
+use Database\Factories\LocalizeFakerFactoryTrait;
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+use Database\Factories\LocalizeFakerFactoryTrait;
 
 
-    switch ($tipo) {
-        case 'email':
-            $value = $fakerIt->email;
-            break;
-        case 'cellulare':
-            $value = $fakerIt->phoneNumber;
-            break;
-        case 'telefono':
-        case 'fax':
-            $value = $fakerIt->phoneNumber;
-            break;
-        case 'url':
-            $value = $fakerIt->url;
-            break;
-        default:
-            $value = $fakerIt->words(2,true);
-            break;
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
+ */
+class CupAnagContattoFactory extends Factory
+{
 
+    use LocalizeFakerFactoryTrait;
+
+    public function definition()
+    {
+
+        $contattoModel = new App\Models\CupAnagContatto();
+
+        $tipoArray = $contattoModel->listEnumValues('tipo');
+
+        $tipo = \Illuminate\Support\Arr::random($tipoArray);
+
+
+        switch ($tipo) {
+            case 'email':
+                $value = $this->faker->email;
+                break;
+            case 'cellulare':
+                $value = $this->faker->phoneNumber;
+                break;
+            case 'telefono':
+            case 'fax':
+                $value = $this->faker->phoneNumber;
+                break;
+            case 'url':
+                $value = $this->faker->url;
+                break;
+            default:
+                $value = $this->faker->words(2, true);
+                break;
+
+        }
+
+
+        return [
+            'tipo' => $tipo,
+            'value' => $value,
+            'label' => rand(1, 100) > 40 ? $this->faker->words(2, true) : null,
+        ];
     }
-
-
-    return [
-        'tipo' => $tipo,
-        'value' => $value,
-        'label' => rand(1,100) > 40 ? $fakerIt->words(2, true) : null,
-    ];
-});
+}

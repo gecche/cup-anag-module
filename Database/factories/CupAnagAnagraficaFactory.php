@@ -6,9 +6,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use Database\Factories\LocalizeFakerFactoryTrait;
 
-use Faker\Generator as Faker;
-use Faker\Factory as FakerFactory;
-
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
