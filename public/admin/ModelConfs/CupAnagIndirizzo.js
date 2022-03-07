@@ -1,8 +1,11 @@
 var ModelCupAnagIndirizzo = {
+    modelName: 'cup_anag_indirizzo',
     listEdit : {
+        modelName: 'cup_anag_indirizzo',
 
     },
     search: {
+        modelName: 'cup_anag_indirizzo',
 
     },
     // view : {

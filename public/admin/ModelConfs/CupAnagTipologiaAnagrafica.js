@@ -1,4 +1,5 @@
 var ModelCupAnagTipologiaAnagrafica = {
+    modelName: 'cup_anag_tipologia_anagrafica',
     search: {
         modelName: 'cup_anag_tipologia_anagrafica',
         //langContext : 'user',

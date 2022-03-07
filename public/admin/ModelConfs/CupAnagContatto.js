@@ -1,8 +1,11 @@
 var ModelCupAnagContatto = {
+    modelName: 'cup_anag_contatto',
     listEdit : {
+        modelName: 'cup_anag_contatto',
 
     },
     search: {
+        modelName: 'cup_anag_contatto',
 
     },
     // view : {

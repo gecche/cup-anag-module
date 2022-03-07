@@ -1,5 +1,7 @@
 var ModelCupAnagTipologiaIndirizzo = {
+    modelName: 'cup_anag_tipologia_indirizzo',
     search: {
+        modelName: 'cup_anag_tipologia_indirizzo',
         // modelName: 'cup_anag_tipologia_indirizzo',
         // //langContext : 'user',
         // fields: ['nome_it'],

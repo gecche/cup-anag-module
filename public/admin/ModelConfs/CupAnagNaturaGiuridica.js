@@ -1,4 +1,5 @@
 var ModelCupAnagNaturaGiuridica = {
+    modelName: 'cup_anag_natura_giuridica',
     search: {
         modelName: 'cup_anag_natura_giuridica',
         //langContext : 'user',
@@ -27,7 +28,7 @@ var ModelCupAnagNaturaGiuridica = {
         },
         fieldsConfig: {
             'soggetti_residenti': {
-                type: 'w-swap-smarty',
+                type: 'w-swap',
                 modelName: 'cup_anag_natura_giuridica'
             }
         },

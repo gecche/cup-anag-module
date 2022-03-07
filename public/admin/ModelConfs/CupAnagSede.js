@@ -1,8 +1,11 @@
 var ModelCupAnagSede = {
+    modelName: 'cup_anag_sede',
     listEdit : {
+        modelName: 'cup_anag_sede',
 
     },
     search: {
+        modelName: 'cup_anag_sede',
 
     },
     // view : {

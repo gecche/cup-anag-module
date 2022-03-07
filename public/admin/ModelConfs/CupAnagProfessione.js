@@ -1,4 +1,5 @@
 var ModelCupAnagProfessione = {
+    modelName: 'cup_anag_professione',
     search: {
         modelName: 'cup_anag_professione',
         //langContext : 'user',

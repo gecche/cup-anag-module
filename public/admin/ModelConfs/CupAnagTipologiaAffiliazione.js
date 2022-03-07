@@ -1,4 +1,5 @@
 var ModelCupAnagTipologiaAffiliazione = {
+    modelName: 'cup_anag_tipologia_affiliazione',
     search: {
         modelName: 'cup_anag_tipologia_affiliazione',
         //langContext : 'user',

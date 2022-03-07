@@ -1,5 +1,8 @@
 var ModelCupAnagAnagrafica = {
-    listEdit: {},
+    modelName: 'cup_anag_anagrafica',
+    listEdit: {
+        modelName: 'cup_anag_anagrafica',
+    },
     search: {
         modelName: 'cup_anag_anagrafica',
         //langContext : 'user',
@@ -64,7 +67,7 @@ var ModelCupAnagAnagrafica = {
                 ],
             },
             'attivo': {
-                type: 'w-swap-smarty',
+                type: 'w-swap',
                 modelName: 'cup_anag_anagrafica'
             }
         }

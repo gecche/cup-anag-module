@@ -1,4 +1,5 @@
 var ModelCupAnagStatoCivile = {
+    modelName: 'cup_anag_stato_civile',
     search: {
         modelName: 'cup_anag_stato_civile',
         //langContext : 'user',
