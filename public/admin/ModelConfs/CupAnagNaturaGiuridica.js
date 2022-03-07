@@ -18,6 +18,7 @@ var ModelCupAnagNaturaGiuridica = {
     // },
     list: {
         modelName: 'cup_anag_natura_giuridica',
+        cType: 'list',
         fields: ['codice', 'nome_it', 'soggetti_residenti'],
         actions: ['action-edit', 'action-delete', 'action-insert',
             'action-export-csv'

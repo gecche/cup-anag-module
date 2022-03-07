@@ -18,6 +18,7 @@ var ModelCupAnagStatoCivile = {
     // },
     list: {
         modelName: 'cup_anag_stato_civile',
+        cType: 'list',
         fields: ['codice', 'nome_it'],
         actions: ['action-edit', 'action-delete', 'action-insert',
             'action-export-csv'
