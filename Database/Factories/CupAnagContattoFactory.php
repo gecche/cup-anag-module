@@ -5,7 +5,6 @@ namespace Modules\CupAnag\Database\Factories;
 use Database\Factories\LocalizeFakerFactoryTrait;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use Database\Factories\LocalizeFakerFactoryTrait;
 
 
 /**
