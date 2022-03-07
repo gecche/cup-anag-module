@@ -21,6 +21,7 @@ class CupAnagDatabaseSeeder extends Seeder
         $this->call(CupAnagStatiCiviliTableSeeder::class);
         $this->call(CupAnagTipologieIndirizziTableSeeder::class);
         $this->call(CupAnagTipologieAnagraficheTableSeeder::class);
+        $this->call(CupAnagTipologieAffiliazioniTableSeeder::class);
         $this->call(CupAnagAnagraficheTableSeeder::class);
         // $this->call("OthersTableSeeder");
     }

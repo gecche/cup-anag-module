@@ -5,6 +5,20 @@ namespace App\Models\Relations;
 trait CupAnagAnagraficaRelations
 {
 
+    public function fotos() {
+
+        return $this->morphMany('App\Models\Foto', 'mediable', null, null, null)
+            ->orderBy('ordine','ASC');
+
+    }
+
+    public function attachments() {
+
+        return $this->morphMany('App\Models\Attachment', 'mediable', null, null, null)
+            ->orderBy('ordine','ASC');
+
+    }
+
     public function naturagiuridica() {
 
         return $this->belongsTo(\App\Models\CupAnagNaturaGiuridica::class, 'naturagiuridica_id', null, null);
@@ -26,13 +40,13 @@ trait CupAnagAnagraficaRelations
     public function comuneresidenza() {
 
         return $this->belongsTo(\App\Models\CupGeoComune::class, 'comuneresidenza_id', null, null);
-    
+
     }
 
     public function nazione() {
 
         return $this->belongsTo(\App\Models\CupGeoNazione::class, 'nazione_id', null, null);
-    
+
     }
 
     public function nazionalita() {

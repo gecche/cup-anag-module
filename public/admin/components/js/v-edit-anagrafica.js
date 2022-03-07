@@ -83,7 +83,27 @@ crud.components.vEditAnagrafica = Vue.component('v-edit-anagrafica', {
     }
 })
 
+crud.components.vInsertAnagrafica = Vue.component('v-insert-anagrafica', {
+    extends: crud.components.vEditAnagrafica,
+    template: "#v-insert-anagrafica-template",
+
+    methods: {
+
+        completed: function () {
+            var that = this;
+            //console.log('telefonata insert',this._uid);
+            that.fisicaGiuridicaValue = that.value.fisicagiuridica;
+
+            // that.$crud.cRefs.contattilist.value = that.value.contatti;
+            // that.$crud.cRefs.contattilist.reload();
+
+        }
+
+    }
+})
+
 var ManageCupAnagAnagrafica = {
     modelName: 'cup_anag_anagrafica',
     editComponentName: 'v-edit-anagrafica',
+    insertComponentName: 'v-insert-anagrafica',
 }
