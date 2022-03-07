@@ -1,13 +1,13 @@
 <?php
 
-use Gecche\Breeze\Facades\Schema;
-use Gecche\Breeze\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
+return new class extends Migration
+{
 
-class CreateCupAnagStatiCiviliTable extends Migration {
-
-	/**
+    /**
 	 * Run the migrations.
 	 *
 	 * @return void
@@ -16,7 +16,7 @@ class CreateCupAnagStatiCiviliTable extends Migration {
 	{
 		Schema::create('cup_anag_stati_civili', function(Blueprint $table)
 		{
-            $table->increments('id');
+            $table->id();
             $table->string('codice')->unique();
             $table->string('nome_it')->unique();
 			$table->nullableTimestamps();
@@ -35,4 +35,4 @@ class CreateCupAnagStatiCiviliTable extends Migration {
 		Schema::drop('cup_anag_stati_civili');
 	}
 
-}
+};

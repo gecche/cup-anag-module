@@ -1,10 +1,10 @@
 <?php
 
-use Gecche\Breeze\Facades\Schema;
-use Gecche\Breeze\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateCupAnagAffiliazioniTable extends Migration
+return new class extends Migration
 {
 
     /**
@@ -16,18 +16,18 @@ class CreateCupAnagAffiliazioniTable extends Migration
     {
         Schema::create('cup_anag_affiliazioni', function (Blueprint $table) {
 
-            $table->increments('id');// int(11) NOT NULL,
+            $table->id();// int(11) NOT NULL,
 
-            $table->integer('organizzazione_id')->unsigned();// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('organizzazione_id');// varchar(4) DEFAULT NULL,
             $table->foreign('organizzazione_id')->references('id')->on('cup_anag_anagrafiche')
                 ->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('affiliata_id')->unsigned();// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('affiliata_id');// varchar(4) DEFAULT NULL,
             $table->foreign('affiliata_id')->references('id')->on('cup_anag_anagrafiche')
                 ->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('sede_id')->unsigned();// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('sede_id');// varchar(4) DEFAULT NULL,
             $table->foreign('sede_id')->references('id')->on('cup_anag_sedi')
                 ->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('tipologia_id')->unsigned()->nullable();// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('tipologia_id')->nullable();// varchar(4) DEFAULT NULL,
             $table->foreign('tipologia_id')->references('id')->on('cup_anag_tipologie_affiliazioni')
                 ->onDelete('cascade')->onUpdate('cascade');
             $table->date('inizio')->nullable();// varchar(4) DEFAULT NULL,
@@ -51,4 +51,4 @@ class CreateCupAnagAffiliazioniTable extends Migration
         Schema::drop('cup_anag_affiliazioni');
     }
 
-}
+};
