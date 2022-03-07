@@ -13,9 +13,12 @@ use App\Models\CupGeoComune;
 use App\Models\CupGeoNazione;
 use App\Models\Foto;
 use Gecche\Cupparis\App\Breeze\Breeze;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 
 class CupAnagAnagrafica extends Breeze {
+
+    use HasFactory;
 
     protected $table = "cup_anag_anagrafiche";
 
