@@ -13,9 +13,9 @@ return [
     ],
     'list' => [
 
-////        'allowed_actions' => [
-////            'csv-export' => true,
-////        ],
+        'allowed_actions' => [
+            'csv-export' => true,
+        ],
 //
         'actions' => [
             'set' => [
@@ -23,28 +23,28 @@ return [
 //                    'soggetti_residenti',
                 ],
             ],
-            //            'csv-export' => [
-//                'default' => [
-//                    'blacklist' => [
-//                    ],
-//                    'whitelist' => [
-//                        "nome_it",
-//
-//                ],
-//                    'fieldsParams' => [
-////                        "istituto|comunenome" => [
-////                            'header' => 'Istituto - comune (nome)',
-////                            'item' => 'istituto|T_COMUNE_ID',
-////                        ],
-//                    ],
-//                    'separator' => ';',
-//                    'endline' => "\n",
-//                    'headers' => 'translate',
-//                    'decimalFrom' => '.',
-//                    'decimalTo' => false,
-//                ],
-//            ]
-//
+            'csv-export' => [
+                'default' => [
+                    'blacklist' => [
+                    ],
+                    'whitelist' => [
+                        "nome_it",
+
+                ],
+                    'fieldsParams' => [
+//                        "istituto|comunenome" => [
+//                            'header' => 'Istituto - comune (nome)',
+//                            'item' => 'istituto|T_COMUNE_ID',
+//                        ],
+                    ],
+                    'separator' => ';',
+                    'endline' => "\n",
+                    'headers' => 'translate',
+                    'decimalFrom' => '.',
+                    'decimalTo' => false,
+                ],
+            ]
+
         ],
 
 //        'dependencies' => [

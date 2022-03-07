@@ -18,6 +18,7 @@ var ModelCupAnagTipologiaAffiliazione = {
     // },
     list: {
         modelName: 'cup_anag_tipologia_affiliazione',
+        cType: 'list',
         fields: ['codice', 'nome_it'],
         actions: ['action-edit', 'action-delete', 'action-insert',
             'action-export-csv'
