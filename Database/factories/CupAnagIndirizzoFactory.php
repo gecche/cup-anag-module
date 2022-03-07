@@ -1,5 +1,7 @@
 <?php
 
+namespace Modules\CupAnag\Database\Factories;
+
 use Database\Factories\LocalizeFakerFactoryTrait;
 use Faker\Generator as Faker;
 use Faker\Factory as FakerFactory;
