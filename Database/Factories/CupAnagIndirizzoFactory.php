@@ -17,6 +17,7 @@ class CupAnagIndirizzoFactory extends Factory
     public function definition()
     {
 
+        $this->setFakerLocale('it_IT');
         $countComuni = \App\Models\CupGeoComune::count();
 
         $comuneId = rand(1, $countComuni);

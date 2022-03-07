@@ -18,7 +18,8 @@ class CupAnagContattoFactory extends Factory
     public function definition()
     {
 
-        $contattoModel = new App\Models\CupAnagContatto();
+        $this->setFakerLocale('it_IT');
+        $contattoModel = new \App\Models\CupAnagContatto();
 
         $tipoArray = $contattoModel->listEnumValues('tipo');
 
