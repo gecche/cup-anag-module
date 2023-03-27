@@ -1,5 +1,8 @@
 var ModelCupAnagStoricoAffiliazione = {
-    listEdit: {},
+    modelName: 'cup_anag_storico_affiliazione',
+    listEdit: {
+        modelName: 'cup_anag_storico_affiliazione',
+    },
     search: {
         modelName: 'cup_anag_storico_affiliazione',
         //langContext : 'user',

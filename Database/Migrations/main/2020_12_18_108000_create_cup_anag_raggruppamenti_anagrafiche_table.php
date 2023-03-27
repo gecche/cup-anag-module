@@ -1,10 +1,10 @@
 <?php
 
-use Gecche\Breeze\Facades\Schema;
-use Gecche\Breeze\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateCupAnagRaggruppamentiAnagraficheTable extends Migration
+return new class extends Migration
 {
 
     /**
@@ -16,12 +16,12 @@ class CreateCupAnagRaggruppamentiAnagraficheTable extends Migration
     {
         Schema::create('cup_anag_raggruppamenti_anagrafiche', function (Blueprint $table) {
 
-            $table->increments('id');// int(11) NOT NULL,
+            $table->id();// int(11) NOT NULL,
 
-            $table->integer('anagrafica_id')->unsigned();// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('anagrafica_id');// varchar(4) DEFAULT NULL,
             $table->foreign('anagrafica_id')->references('id')->on('cup_anag_anagrafiche')
                 ->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('tipologia_id')->unsigned();// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('tipologia_id');// varchar(4) DEFAULT NULL,
             $table->foreign('tipologia_id')->references('id')->on('cup_anag_tipologie_anagrafiche')
                 ->onDelete('cascade')->onUpdate('cascade');
 
@@ -38,4 +38,4 @@ class CreateCupAnagRaggruppamentiAnagraficheTable extends Migration
         Schema::drop('cup_anag_raggruppamenti_anagrafiche');
     }
 
-}
+};

@@ -1,4 +1,5 @@
 var ModelCupAnagNaturaGiuridica = {
+    modelName: 'cup_anag_natura_giuridica',
     search: {
         modelName: 'cup_anag_natura_giuridica',
         //langContext : 'user',
@@ -17,6 +18,7 @@ var ModelCupAnagNaturaGiuridica = {
     // },
     list: {
         modelName: 'cup_anag_natura_giuridica',
+        cType: 'list',
         fields: ['codice', 'nome_it', 'soggetti_residenti'],
         actions: ['action-edit', 'action-delete', 'action-insert',
             'action-export-csv'
@@ -27,7 +29,7 @@ var ModelCupAnagNaturaGiuridica = {
         },
         fieldsConfig: {
             'soggetti_residenti': {
-                type: 'w-swap-smarty',
+                type: 'w-swap',
                 modelName: 'cup_anag_natura_giuridica'
             }
         },

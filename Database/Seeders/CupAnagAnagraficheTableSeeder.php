@@ -1,4 +1,5 @@
 <?php
+
 namespace Modules\CupAnag\Database\Seeders;
 
 use Illuminate\Database\Seeder;
@@ -17,7 +18,8 @@ class CupAnagAnagraficheTableSeeder extends Seeder
 
         $countTipiIndirizzi = \App\Models\CupAnagTipologiaIndirizzo::count();
         $countTipiAnagrafiche = \App\Models\CupAnagTipologiaAnagrafica::count();
-        factory(\App\Models\CupAnagAnagrafica::class, 500)->create()->each(function ($anagrafica)
+
+        \App\Models\CupAnagAnagrafica::factory(500)->create()->each(function ($anagrafica)
         use ($countTipiIndirizzi, $countTipiAnagrafiche) {
 
             /*
@@ -26,9 +28,11 @@ class CupAnagAnagraficheTableSeeder extends Seeder
             $nContatti = rand(0, 100) > 45 ? rand(1, 8) : 0;
 
             for ($i = 1; $i <= $nContatti; $i++) {
-                $anagrafica->contatti()->save(factory(\App\Models\CupAnagContatto::class)->make([
-                    'ordine' => $i - 1,
-                ]));
+                $anagrafica->contatti()->save(
+                    \App\Models\CupAnagContatto::factory()->make([
+                        'ordine' => $i - 1,
+                    ])
+                );
             }
 
             /*
@@ -39,10 +43,11 @@ class CupAnagAnagraficheTableSeeder extends Seeder
             $nIndirizzi = min($nIndirizzi, $countTipiIndirizzi);
             $tipiIndirizzi = \Illuminate\Support\Arr::random(range(1, $countTipiIndirizzi), $nIndirizzi);
             for ($i = 0; $i < count($tipiIndirizzi); $i++) {
-                $anagrafica->indirizzi()->save(factory(\App\Models\CupAnagIndirizzo::class)->make([
-                    'ordine' => $i,
-                    'tipologia_id' => $tipiIndirizzi[$i],
-                ]));
+                $anagrafica->indirizzi()->save(
+                    \App\Models\CupAnagIndirizzo::factory()->make([
+                        'ordine' => $i,
+                        'tipologia_id' => $tipiIndirizzi[$i],
+                    ]));
             }
 
             /*

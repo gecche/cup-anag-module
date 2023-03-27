@@ -1,10 +1,10 @@
 <?php
 
-use Gecche\Breeze\Facades\Schema;
-use Gecche\Breeze\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateCupAnagIndirizziTable extends Migration
+return new class extends Migration
 {
 
     /**
@@ -16,19 +16,19 @@ class CreateCupAnagIndirizziTable extends Migration
     {
         Schema::create('cup_anag_indirizzi', function (Blueprint $table) {
 
-            $table->increments('id');// int(11) NOT NULL,
+            $table->id();// int(11) NOT NULL,
 
-            $table->integer('anagrafica_id')->unsigned();// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('anagrafica_id');// varchar(4) DEFAULT NULL,
             $table->foreign('anagrafica_id')->references('id')->on('cup_anag_anagrafiche')
                 ->onDelete('cascade')->onUpdate('cascade');
 
-            $table->integer('tipologia_id')->unsigned()->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('tipologia_id')->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
             $table->foreign('tipologia_id')->references('id')->on('cup_anag_tipologie_indirizzi')
                 ->onDelete('cascade')->onUpdate('cascade');
 
             $table->string('indirizzo')->nullable()->default(null);
             $table->string('cap',5)->nullable()->default(null);
-            $table->integer('comune_id')->unsigned()->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('comune_id')->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
             $table->foreign('comune_id')->references('id')->on('cup_geo_comuni')
                 ->onDelete('restrict')->onUpdate('cascade');
 
@@ -55,4 +55,4 @@ class CreateCupAnagIndirizziTable extends Migration
         Schema::drop('cup_anag_indirizzi');
     }
 
-}
+};

@@ -1,4 +1,5 @@
 var ModelCupAnagProfessione = {
+    modelName: 'cup_anag_professione',
     search: {
         modelName: 'cup_anag_professione',
         //langContext : 'user',
@@ -17,6 +18,7 @@ var ModelCupAnagProfessione = {
     // },
     list: {
         modelName: 'cup_anag_professione',
+        cType: 'list',
         fields: ['codice', 'nome_it'],
         actions: ['action-edit', 'action-delete', 'action-insert',
             'action-export-csv'

@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "gecche/cup-geo-module": "v6.x-dev"
+        "gecche/cup-geo-module": "v9.x-dev"
     },
     "extra": {
         "laravel": {

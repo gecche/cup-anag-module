@@ -90,9 +90,9 @@ class CupAnagServiceProvider extends ServiceProvider
      */
     public function registerFactories()
     {
-        if (! app()->environment('production') && $this->app->runningInConsole()) {
-            app(Factory::class)->load(module_path('CupAnag', 'Database/factories'));
-        }
+//        if (! app()->environment('production') && $this->app->runningInConsole()) {
+//            app(Factory::class)->load(module_path('CupAnag', 'Database/factories'));
+//        }
     }
 
     public function cupparisPublish()
@@ -107,6 +107,7 @@ class CupAnagServiceProvider extends ServiceProvider
             __DIR__ . '/../app/Models/Relations' => app_path('Models/Relations'),
             __DIR__ . '/../app/Policies' => app_path('Policies'),
             __DIR__ . '/../app/Foorm' => app_path('Foorm'),
+            __DIR__ . '/../app/database/factories' => database_path('factories'),
             ], 'models');
 
         $this->publishes([

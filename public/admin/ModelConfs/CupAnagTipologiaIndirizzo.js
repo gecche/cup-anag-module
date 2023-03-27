@@ -1,5 +1,7 @@
 var ModelCupAnagTipologiaIndirizzo = {
+    modelName: 'cup_anag_tipologia_indirizzo',
     search: {
+        modelName: 'cup_anag_tipologia_indirizzo',
         // modelName: 'cup_anag_tipologia_indirizzo',
         // //langContext : 'user',
         // fields: ['nome_it'],
@@ -17,7 +19,8 @@ var ModelCupAnagTipologiaIndirizzo = {
     // },
     list: {
         modelName: 'cup_anag_tipologia_indirizzo',
-        fields: ['codice', 'nome_it'],
+        cType: 'list',
+        fields: ['nome_it'],
         actions: ['action-edit', 'action-delete', 'action-insert',
             'action-export-csv'
         ],

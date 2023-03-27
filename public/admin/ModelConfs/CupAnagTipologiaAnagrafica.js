@@ -1,4 +1,5 @@
 var ModelCupAnagTipologiaAnagrafica = {
+    modelName: 'cup_anag_tipologia_anagrafica',
     search: {
         modelName: 'cup_anag_tipologia_anagrafica',
         //langContext : 'user',
@@ -16,6 +17,7 @@ var ModelCupAnagTipologiaAnagrafica = {
     //     }
     // },
     list: {
+        cType: 'list',
         modelName: 'cup_anag_tipologia_anagrafica',
         fields: ['codice', 'nome_it'],
         actions: ['action-edit', 'action-delete', 'action-insert',

@@ -1,10 +1,10 @@
 <?php
 
-use Gecche\Breeze\Facades\Schema;
-use Gecche\Breeze\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateCupAnagAnagraficheTable extends Migration
+return new class extends Migration
 {
 
     /**
@@ -16,7 +16,7 @@ class CreateCupAnagAnagraficheTable extends Migration
     {
         Schema::create('cup_anag_anagrafiche', function (Blueprint $table) {
 
-            $table->increments('id');// int(11) NOT NULL,
+            $table->id();// int(11) NOT NULL,
 
             $table->string('cognome')->nullable()->default(null);
             $table->string('nome')->nullable()->default(null);
@@ -33,39 +33,39 @@ class CreateCupAnagAnagraficheTable extends Migration
 
             $table->date('datanascita')->nullable()->default(null);
 
-            $table->integer('comunenascita_id')->unsigned()->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('comunenascita_id')->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
             $table->foreign('comunenascita_id')->references('id')->on('cup_geo_comuni')
                 ->onDelete('restrict')->onUpdate('cascade');
 
-            $table->integer('nazionalita_id')->unsigned()->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('nazionalita_id')->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
             $table->foreign('nazionalita_id')->references('id')->on('cup_geo_nazioni')
                 ->onDelete('restrict')->onUpdate('cascade');
 
             //PERSONA GIURIDICA
-            $table->integer('naturagiuridica_id')->unsigned()->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('naturagiuridica_id')->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
             $table->foreign('naturagiuridica_id')->references('id')->on('cup_anag_nature_giuridiche')
                 ->onDelete('restrict')->onUpdate('cascade');
-            $table->integer('rapplegale_id')->unsigned()->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('rapplegale_id')->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
             $table->foreign('rapplegale_id')->references('id')->on('cup_anag_anagrafiche')
                 ->onDelete('restrict')->onUpdate('cascade');
 
             //PERSONA FISICA
             $table->enum('sesso', ['F', 'M'])->nullable()->default(null);
-            $table->integer('professione_id')->unsigned()->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('professione_id')->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
             $table->foreign('professione_id')->references('id')->on('cup_anag_professioni')
                 ->onDelete('restrict')->onUpdate('cascade');
-            $table->integer('stato_civile_id')->unsigned()->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('stato_civile_id')->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
             $table->foreign('stato_civile_id')->references('id')->on('cup_anag_stati_civili')
                 ->onDelete('restrict')->onUpdate('cascade');
 
             $table->string('indirizzo')->nullable()->default(null);
             $table->string('cap',5)->nullable()->default(null);
-            $table->integer('comuneresidenza_id')->unsigned()->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('comuneresidenza_id')->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
             $table->foreign('comuneresidenza_id')->references('id')->on('cup_geo_comuni')
                 ->onDelete('restrict')->onUpdate('cascade');
             $table->string('localita')->nullable()->default(null);
             $table->string('numero_civico')->nullable()->default(null);
-            $table->integer('nazione_id')->unsigned()->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
+            $table->unsignedBigInteger('nazione_id')->index()->nullable()->default(null);// varchar(4) DEFAULT NULL,
             $table->foreign('nazione_id')->references('id')->on('cup_geo_nazioni')
                 ->onDelete('restrict')->onUpdate('cascade');
 
@@ -107,4 +107,4 @@ class CreateCupAnagAnagraficheTable extends Migration
         Schema::drop('cup_anag_anagrafiche');
     }
 
-}
+};

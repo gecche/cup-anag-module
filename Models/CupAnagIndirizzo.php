@@ -3,9 +3,12 @@
 namespace Modules\CupAnag\Models;
 
 use Gecche\Cupparis\App\Breeze\Breeze;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 
 class CupAnagIndirizzo extends Breeze {
+
+    use HasFactory;
 
     protected $table = "cup_anag_indirizzi";
 
